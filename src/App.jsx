@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   Menu, X, Mail, Phone, Linkedin, ChevronDown, Code2, Database,
-  Smartphone, Cpu, Plane, ShieldCheck, Sparkles, Send, CheckCircle2
+  Smartphone, Cpu, Plane, ShieldCheck, Sparkles, Send, CheckCircle2, FolderGit2
 } from "lucide-react";
 import alicePhoto from "../images/alice_profile.jpg";
 import brianPhoto from "../images/brian_profile.jpg";
@@ -17,6 +17,7 @@ const people = [
     email: "hsumyatthansin2000@gmail.com",
     phone: "+971 56 443 7482",
     linkedin: "https://www.linkedin.com/in/hsu-myat-than-sin-00a192215/",
+    githubLink: "https://github.com/hmyatts",
   },
   {
     name: "Kyaw Si Thu",
@@ -28,6 +29,7 @@ const people = [
     email: "kyawsithu3005@gmail.com",
     phone: "+971 56 166 3901",
     linkedin: "https://www.linkedin.com/in/kyawsithu30",
+    githubLink: "https://github.com/Reg3n-Onee",
   },
 ];
 
@@ -326,7 +328,7 @@ export default function App() {
       <section id="contact" className="bg-slate-50 py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <p className="text-indigo-600 font-semibold uppercase text-sm tracking-wide mb-2">Contact</p>
+            {/* <p className="text-indigo-600 font-semibold uppercase text-sm tracking-wide mb-2">Contact</p> */}
             <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
             <p className="text-slate-500 mt-3">Have a project in mind? We'd love to hear from you.</p>
           </div>
@@ -358,6 +360,10 @@ export default function App() {
                   <div className="flex items-center gap-3">
                     <Linkedin size={16} className="text-indigo-500 shrink-0" />
                     <span><a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-indigo-500">LinkedIn Profile</a></span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FolderGit2 size={16} className="text-indigo-500 shrink-0" />
+                    <span>{p.githubLink}</span>
                   </div>
                 </div>
               </div>
