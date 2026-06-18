@@ -3,8 +3,8 @@ import {
   Menu, X, Mail, Phone, Linkedin, ChevronDown, Code2, Database,
   Smartphone, Cpu, Plane, ShieldCheck, Sparkles, Send, CheckCircle2
 } from "lucide-react";
-import alicePhoto from "../images/female-portfolio.jpg";
-import brianPhoto from "../images/male-portfolio.jpg";
+import alicePhoto from "../images/alice_profile.jpg";
+import brianPhoto from "../images/brian_profile.jpg";
 
 const people = [
   {
@@ -12,26 +12,28 @@ const people = [
     nickname: "Alice",
     role: "Software Developer",
     photo: alicePhoto,
-    bio: "Software developer experienced in building scalable backend systems, APIs, and computer vision applications. Comfortable across the stack — from Oracle APEX and React Native to FastAPI and big data tools like Hadoop and Spark.",
+    bio: "Software developer at GymNation, experienced in building scalable backend systems, APIs, and computer vision applications. Comfortable across the stack — from Oracle APEX and React Native to FastAPI and big data tools like Hadoop and Spark.",
     skills: ["Python", "FastAPI", "SQL", "Computer Vision", "Machine Learning", "React Native", "Oracle APEX"],
     email: "hsumyatthansin2000@gmail.com",
     phone: "+971 56 443 7482",
+    linkedin: "https://www.linkedin.com/in/hsu-myat-than-sin-00a192215/",
   },
   {
     name: "Kyaw Si Thu",
     nickname: "Brian",
-    role: "Junior Data Scientist",
+    role: "Software Developer",
     photo: brianPhoto,
-    bio: "Data scientist with a strong foundation in machine learning, NLP, and big data. AWS Cloud Practitioner and Google Data Analytics certified, with hands-on experience in IoT pipelines, predictive modeling, and translating data into clear business insight.",
-    skills: ["Python", "Machine Learning", "NLP", "AWS", "Tableau", "SQL", "Big Data"],
-    email: "",
+    bio: "Software developer at Coding Giants, with hands-on experience in modele pipelines, predictive modeling, and translating data into clear business insight, with a strong background in machine learning, NLP, and big data. AWS Cloud certified.",
+    skills: ["Python", "Machine Learning", "NLP", "AWS","Cloud Deployment" ,"Tableau", "SQL", "Big Data"],
+    email: "kyawsithu3005@gmail.com",
     phone: "+971 56 166 3901",
+    linkedin: "https://www.linkedin.com/in/kyawsithu30",
   },
 ];
 
 const projects = [
   {
-    title: "CRM Platform",
+    title: "Customer Relationship Management (CRM) Platform",
     subtitle: "Coding Giants Dubai",
     category: "industry",
     icon: Database,
@@ -40,7 +42,7 @@ const projects = [
     tags: ["Web App", "CRM", "Dashboard"],
   },
   {
-    title: "Government Approval System",
+    title: "Employee Request Approval System",
     subtitle: "Web & Mobile · Government Services Provider",
     category: "industry",
     icon: ShieldCheck,
@@ -175,7 +177,7 @@ export default function App() {
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-teal-200 rounded-full blur-3xl opacity-50" />
         <div className="relative text-center max-w-3xl mx-auto">
           <p className="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-4">
-            Software Developer & Data Scientist
+            Software Developers 
           </p>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
             <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-teal-500 bg-clip-text text-transparent">
@@ -183,7 +185,7 @@ export default function App() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-            Two engineers building practical software and data solutions — from
+            Two Developers building practical software and data solutions — from
             CRM platforms and government systems to machine learning and computer vision.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -355,7 +357,7 @@ export default function App() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Linkedin size={16} className="text-indigo-500 shrink-0" />
-                    <span className="text-slate-400">LinkedIn profile (add link)</span>
+                    <span><a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-indigo-500">LinkedIn Profile</a></span>
                   </div>
                 </div>
               </div>
