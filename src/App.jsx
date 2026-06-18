@@ -3,29 +3,29 @@ import {
   Menu, X, Mail, Phone, Linkedin, ChevronDown, Code2, Database,
   Smartphone, Cpu, Plane, ShieldCheck, Sparkles, Send, CheckCircle2
 } from "lucide-react";
+import alicePhoto from "../images/female-portfolio.jpg";
+import brianPhoto from "../images/male-portfolio.jpg";
 
 const people = [
   {
-    initial: "A",
     name: "Hsu Myat Than Sin",
     nickname: "Alice",
     role: "Software Developer",
+    photo: alicePhoto,
     bio: "Software developer experienced in building scalable backend systems, APIs, and computer vision applications. Comfortable across the stack — from Oracle APEX and React Native to FastAPI and big data tools like Hadoop and Spark.",
     skills: ["Python", "FastAPI", "SQL", "Computer Vision", "Machine Learning", "React Native", "Oracle APEX"],
     email: "hsumyatthansin2000@gmail.com",
     phone: "+971 56 443 7482",
-    gradient: "from-indigo-500 to-violet-500",
   },
   {
-    initial: "B",
     name: "Kyaw Si Thu",
     nickname: "Brian",
     role: "Junior Data Scientist",
+    photo: brianPhoto,
     bio: "Data scientist with a strong foundation in machine learning, NLP, and big data. AWS Cloud Practitioner and Google Data Analytics certified, with hands-on experience in IoT pipelines, predictive modeling, and translating data into clear business insight.",
     skills: ["Python", "Machine Learning", "NLP", "AWS", "Tableau", "SQL", "Big Data"],
     email: "",
     phone: "+971 56 166 3901",
-    gradient: "from-teal-500 to-emerald-500",
   },
 ];
 
@@ -223,18 +223,19 @@ export default function App() {
                 key={p.nickname}
                 className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-center gap-4 mb-5">
-                  <div
-                    className={`w-16 h-16 rounded-full bg-gradient-to-br ${p.gradient} flex items-center justify-center text-white text-2xl font-bold shrink-0`}
-                  >
-                    {p.initial}
-                  </div>
-                  <div>
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:items-center mb-6">
+                  <div className="flex flex-col items-center text-center shrink-0 md:w-44">
+                    <img
+                      src={p.photo}
+                      alt={p.name}
+                      className="w-28 h-28 rounded-full object-cover shadow-lg mb-4 ring-2 ring-slate-100"
+                    />
                     <h3 className="text-xl font-bold leading-tight">{p.name}</h3>
-                    <p className="text-sm text-slate-500">"{p.nickname}" · {p.role}</p>
+                    <p className="text-sm text-indigo-600 font-medium mt-1">"{p.nickname}"</p>
+                    <p className="text-sm text-slate-500 mt-0.5">{p.role}</p>
                   </div>
+                  <p className="text-slate-600 leading-relaxed flex-1">{p.bio}</p>
                 </div>
-                <p className="text-slate-600 leading-relaxed mb-6">{p.bio}</p>
                 <div className="flex flex-wrap gap-2">
                   {p.skills.map((s) => (
                     <span
@@ -331,13 +332,15 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {people.map((p) => (
               <div key={p.nickname} className="bg-white rounded-2xl shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${p.gradient} flex items-center justify-center text-white font-bold text-sm shrink-0`}
-                  >
-                    {p.initial}
-                  </div>
-                  <h3 className="font-bold">{p.nickname}</h3>
+                <div className="flex flex-col items-center text-center mb-5">
+                  <img
+                    src={p.photo}
+                    alt={p.name}
+                    className="w-20 h-20 rounded-full object-cover shadow-md mb-3 ring-2 ring-slate-100"
+                  />
+                  <h3 className="font-bold leading-tight">{p.name}</h3>
+                  <p className="text-sm text-indigo-600 font-medium mt-1">"{p.nickname}"</p>
+                  <p className="text-sm text-slate-500 mt-0.5">{p.role}</p>
                 </div>
                 <div className="space-y-3 text-sm text-slate-600">
                   {p.email && (
