@@ -12,7 +12,7 @@ const people = [
     nickname: "Alice",
     role: "Software Developer",
     photo: alicePhoto,
-    bio: "Software developer at GymNation, experienced in building scalable backend systems, APIs, and computer vision applications. Comfortable across the stack — from Oracle APEX and React Native to FastAPI and big data tools like Hadoop and Spark.",
+    bio: "Full Stack Developer at GymNation | Dean’s Merit List CS graduate | Experienced in FastAPI, React Native, Oracle APEX, Python, Hadoop, and Spark, building scalable applications, APIs, and AI-powered solutions.",
     skills: ["Python", "FastAPI", "SQL", "Computer Vision", "Machine Learning", "React Native", "Oracle APEX"],
     email: "hsumyatthansin2000@gmail.com",
     phone: "+971 56 443 7482",
@@ -24,7 +24,7 @@ const people = [
     nickname: "Brian",
     role: "Software Developer",
     photo: brianPhoto,
-    bio: "Software developer at Coding Giants, with hands-on experience in modele pipelines, predictive modeling, and translating data into clear business insight, with a strong background in machine learning, NLP, and big data. AWS Cloud certified.",
+    bio: "Software Developer at Coding Giants | Dean’s Merit List CS graduate | AWS Cloud Certified | Experienced in scalable software development, machine learning, NLP, and big data technologies including Python, FastAPI, React Native, Hadoop, and Spark.",
     skills: ["Python", "Machine Learning", "NLP", "AWS","Cloud Deployment" ,"Tableau", "SQL", "Big Data"],
     email: "kyawsithu3005@gmail.com",
     phone: "+971 56 166 3901",
@@ -110,8 +110,8 @@ const projects = [
 
 const filters = [
   { key: "all", label: "All Work" },
-  { key: "industry", label: "Industry & Freelance" },
-  { key: "academic", label: "Academic & Competitions" },
+  { key: "industry", label: "Industry" },
+  { key: "academic", label: "Academic Works" },
 ];
 
 export default function App() {
